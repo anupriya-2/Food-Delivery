@@ -30,7 +30,7 @@
                         String Id = resultSet.getString("menu_item_id");
 
                         out.println("Menu Item ID: " + Id + "<br><img src=\"images/"+Id+".jpg\"><br>");
-                    }
+                    }   
 
                 // Display database version
                 if (resultSet.next()) {
