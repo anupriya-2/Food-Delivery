@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,155 @@
 
 <div class="container">
     <h2>Your Cart</h2>
-    <!-- Display selected items here -->
+   Display selected items here 
     <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script>
+    function placeOrder() {
+        alert("Order placed!");
+        window.location.href = 'order-status.html';
+    }
+</script>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        .cart-item .item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item .item-price {
+            color: #1a8b3c;
+            font-weight: bold;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .total .label {
+            color: #555;
+        }
+
+        .total .price {
+            color: #1a8b3c;
+        }
+
+        .place-order-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff5722;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .place-order-btn:hover {
+            background-color: #e64a19;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Your Cart</h2>
+
+    <!-- Cart Items -->
+    <div class="cart-items">
+        <!-- Example Item 1 -->
+        <div class="cart-item">
+            <div class="item-details">
+                <h4>Pizza Margherita</h4>
+                <p>Delicious classic pizza with mozzarella and basil.</p>
+            </div>
+            <div class="item-price">$12.99</div>
+            <img src="https://via.placeholder.com/50" alt="Pizza">
+        </div>
+        
+        <!-- Example Item 2 -->
+        <div class="cart-item">
+            <div class="item-details">
+                <h4>Cheeseburger</h4>
+                <p>Juicy burger with cheddar cheese and fresh veggies.</p>
+            </div>
+            <div class="item-price">$8.99</div>
+            <img src="https://via.placeholder.com/50" alt="Burger">
+        </div>
+
+        <!-- You can dynamically generate more items based on cart data -->
+    </div>
+
+    <!-- Total Price -->
+    <div class="total">
+        <div class="label">Total</div>
+        <div class="price">$21.98</div>
+    </div>
+
+    <!-- Place Order Button -->
+    <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
 </div>
 
 <script>
